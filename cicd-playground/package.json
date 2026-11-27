@@ -1,0 +1,11 @@
+{
+  "name": "cicd-playground",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "用一个运费计算器体验 GitHub Actions 的自动测试与发布。",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node --test"
+  }
+}

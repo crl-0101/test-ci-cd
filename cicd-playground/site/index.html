@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="通过一个运费计算器，体验从代码提交到自动测试、自动发布的完整流程。" />
+    <title>我的第一次 CI/CD</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <span class="brand"><span class="brand-dot" aria-hidden="true"></span> CI/CD PLAYGROUND</span>
+        <span class="version">v1.0.0</span>
+      </header>
+
+      <section class="hero" aria-labelledby="headline">
+        <p class="eyebrow">从一次提交开始</p>
+        <h1 id="headline">我的第一次自动发布</h1>
+        <p class="intro">你正在查看这个项目的网页。完成发布后，每次向 main 提交代码，自动化流程都会先运行测试，再更新网站。</p>
+      </section>
+
+      <section class="pipeline" aria-label="自动化流程">
+        <div><span class="step">01</span><strong>提交代码</strong><span>Commit</span></div>
+        <span class="arrow" aria-hidden="true">→</span>
+        <div><span class="step">02</span><strong>自动测试</strong><span>Continuous Integration</span></div>
+        <span class="arrow" aria-hidden="true">→</span>
+        <div><span class="step">03</span><strong>自动发布</strong><span>Continuous Deployment</span></div>
+      </section>
+
+      <section class="calculator" aria-labelledby="calculator-title">
+        <div class="calculator-copy">
+          <p class="eyebrow">试一试业务规则</p>
+          <h2 id="calculator-title">一个小小的运费计算器</h2>
+          <p>商品满 ¥<span id="threshold">99</span> 包邮，否则运费 ¥10。自动测试会检查包邮门槛以及无效金额，帮助发现错误。</p>
+        </div>
+        <form id="calculator">
+          <label for="amount">商品金额（元）</label>
+          <div class="input-row">
+            <input id="amount" name="amount" type="number" min="0.01" step="0.01" value="99" required />
+            <button type="submit">计算运费</button>
+          </div>
+          <output id="result" for="amount" aria-live="polite">正在计算…</output>
+        </form>
+      </section>
+
+      <footer>下一步：把标题改成你喜欢的一句话，提交后到 GitHub 的 Actions 页面查看发布进度。</footer>
+    </main>
+  </body>
+</html>
