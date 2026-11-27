@@ -1,5 +1,5 @@
 // 练习：把下一行的 99 改成 199，提交后观察 CI 阻止发布。
-export const FREE_SHIPPING_THRESHOLD = 99;
+export const FREE_SHIPPING_THRESHOLD = 199;
 export const SHIPPING_FEE = 10;
 
 export function calculateShipping(amount) {
